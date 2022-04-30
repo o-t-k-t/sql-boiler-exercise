@@ -18,3 +18,12 @@ sql-migrate up
 ```
 sqlboiler psql
 ```
+
+
+### ビルド
+
+```
+
+sqlboiler psql
+go build
+```
