@@ -4,11 +4,11 @@ default: &default
 
 development:
   <<: *default
-  datasource: host=localhost dbname=c_tool_development user=postgres password=postgres port=5432 sslmode=disable TimeZone=Asia/Shanghai
+  datasource: host=localhost dbname=feeder_development user=postgres password=postgres port=5432 sslmode=disable TimeZone=Asia/Shanghai
 
 test:
   <<: *default
-  datasource: host=localhost dbname=c_tool_test user=postgres password=postgres port=5432 sslmode=disable TimeZone=Asia/Shanghai
+  datasource: host=localhost dbname=feeder_test user=postgres password=postgres port=5432 sslmode=disable TimeZone=Asia/Shanghai
 
 # production:
 #   dialect: postgres
