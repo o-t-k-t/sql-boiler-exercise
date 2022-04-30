@@ -7,6 +7,7 @@ import (
 
 	_ "github.com/lib/pq"
 
+	"github.com/o-t-k-t/sql_boiler_exercise/entity"
 	"github.com/o-t-k-t/sql_boiler_exercise/models"
 	"github.com/volatiletech/sqlboiler/v4/boil"
 )
@@ -37,6 +38,8 @@ func main() {
 	users, err := models.Users().All(ctx, db)
 
 	for _, user := range users {
-		fmt.Printf("Hello %#v", user)
+		u := entity.User{User: user}
+
+		fmt.Printf("Hello %#v", u.LocalName())
 	}
 }
