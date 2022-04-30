@@ -1,0 +1,17 @@
+default: &default
+  dialect: postgres
+  dir: db/migrations
+
+development:
+  <<: *default
+  datasource: host=localhost dbname=c_tool_development user=postgres password=postgres port=5432 sslmode=disable TimeZone=Asia/Shanghai
+
+test:
+  <<: *default
+  datasource: host=localhost dbname=c_tool_test user=postgres password=postgres port=5432 sslmode=disable TimeZone=Asia/Shanghai
+
+# production:
+#   dialect: postgres
+#   datasource: dbname=myapp sslmode=disable
+#   dir: migrations/postgres
+#   table: migrations
